@@ -9,167 +9,38 @@
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+    --green-deep: #1a3320;
+    --green-mid: #2d5a3d;
+    --green-bright: #4a9c6b;
+    --green-light: #a8d5b5;
+    --cream: #f7f4ee;
+    --warm-white: #fdfcf9;
+    --text-dark: #1a1a18;
+    --text-mid: #4a4a44;
+    --text-muted: #888880;
+    --accent: #c8e63c;
+  }
+      
+       html { scroll-behavier: smooth; }
       body {
         font-family: 'DM Sans', sans-serif;
-        background: #f5f4f0;
-        color: #1a1a1a;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem 1rem;
+        background: vart )--warm-white);
+        colour: var(--text-dark);
+        overflow-x: hidden;
       }
+      /* NAV */
 
-      .container {
-        width: 100%;
-        max-width: 520px;
+      nav {
+        postion: fixed; top: 0; left: 0; right: 0; z-index:100;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 1.25rem 2.2rem;
+        background; rgba(253, 252,249,0.92);
+        backdrop-filter: blur(12px);
+        border-bottem: 1px solid rgba (0,0,0,0.06);
       }
-
-      .badge {
-        display: inline-block;
-        background: #3B6D11;
-        color: #EAF3DE;
-        font-size: 12px;
-        font-weight: 500;
-        padding: 4px 14px;
-        border-radius: 20px;
-        letter-spacing: 0.04em;
-        margin-bottom: 1.25rem;
-      }
-
-      h1 {
-        font-family: 'DM Serif Display', serif;
-        font-size: 40px;
-        line-height: 1.15;
-        color: #111;
-        margin-bottom: 0.5rem;
-      }
-
-      h1 em {
-        font-style: italic;
-      }
-
-      .subtitle {
-        font-size: 15px;
-        font-weight: 300;
-        color: #555;
-        line-height: 1.6;
-        margin-bottom: 2rem;
-      }
-
-      .card {
-        background: #fff;
-        border: 0.5px solid rgba(0,0,0,0.12);
-        border-radius: 12px;
-        padding: 1.25rem 1.5rem;
-        margin-bottom: 0.75rem;
-      }
-
-      .card-label {
-        font-size: 11px;
-        font-weight: 500;
-        color: #888;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-      }
-
-      .input-row {
-        display: flex;
-        gap: 8px;
-      }
-
-      input {
-        flex: 1;
-        height: 38px;
-        padding: 0 12px;
-        font-family: 'DM Sans', sans-serif;
-        font-size: 14px;
-        color: #111;
-        background: #fafafa;
-        border: 0.5px solid rgba(0,0,0,0.18);
-        border-radius: 8px;
-        outline: none;
-        transition: border-color 0.15s;
-      }
-
-      input:focus {
-        border-color: #3B6D11;
-        box-shadow: 0 0 0 3px rgba(59,109,17,0.12);
-      }
-
-      input::placeholder {
-        color: #aaa;
-      }
-
-      button {
-        height: 38px;
-        padding: 0 18px;
-        font-family: 'DM Sans', sans-serif;
-        font-size: 14px;
-        font-weight: 500;
-        color: #fff;
-        background: #3B6D11;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        white-space: nowrap;
-        transition: background 0.15s, transform 0.1s;
-      }
-
-      button:hover { background: #27500A; }
-      button:active { transform: scale(0.98); }
-
-      .sms-note {
-        font-size: 11px;
-        color: #999;
-        line-height: 1.5;
-        margin-top: 10px;
-      }
-
-      .divider {
-        text-align: center;
-        font-size: 12px;
-        color: #aaa;
-        margin: 0.25rem 0;
-      }
-
-      .privacy {
-        font-size: 12px;
-        color: #aaa;
-        text-align: center;
-        margin-top: 1.25rem;
-        line-height: 1.5;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-
-      <span class="badge">PerfectGrass deals</span>
-
-      <h1>Promos &amp; special<br><em>deals, just for you.</em></h1>
-      <p class="subtitle">Sign up below to receive exclusive offers and be the first to know about seasonal sales.</p>
-
-      <div class="card">
-        <div class="card-label">Email notifications</div>
-        <div class="input-row">
-          <input type="email" placeholder="your@email.com" autocomplete="email">
-          <button type="button">Subscribe</button>
-        </div>
-      </div>
-
-      <div class="divider">or</div>
-
-      <div class="card">
-        <div class="card-label">SMS notifications</div>
-        <div class="input-row">
-          <input type="tel" placeholder="+61 4XX XXX XXX" autocomplete="tel">
-          <button type="button">Subscribe</button>
-        </div>
-        <p class="sms-note">By subscribing via SMS you agree to receive promotional texts. Msg &amp; data rates may apply. Reply STOP at any time to opt out.</p>
-      </div>
       
+    
 
 
 
