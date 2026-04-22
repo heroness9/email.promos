@@ -170,7 +170,53 @@
         <p class="sms-note">By subscribing via SMS you agree to receive promotional texts. Msg &amp; data rates may apply. Reply STOP at any time to opt out.</p>
       </div>
       <p class="privacy">We respect your privacy and will never share your details.</p>
-     <div class="Promos & Special Deals">
+     <section class="availability-section" id="availability">
+  <div class="avail-inner">
+    <div class="avail-left fade-up">
+      <div class="section-tag">When we're free</div>
+      <h2 class="section-title">Check my<br>availability</h2>
+      <p class="section-sub">See which days we're free before you get in touch. We update this calendar regularly so you're never left guessing.</p>
+      <div class="avail-status-pill">
+        <div class="status-dot" id="statusDot"></div>
+        <span id="statusText">Loading availability...</span>
+      </div>
+      <p style="font-size: 0.8rem; color: rgba(255,255,255,0.3); margin-top: 1.5rem; line-height: 1.6;">
+        Green = we're free &nbsp;·&nbsp; Red = fully booked<br>
+        Days without a colour haven't been set yet.
+      </p>
+    </div>
+    <div class="fade-up">
+      <div class="cal-widget">
+        <div class="cal-nav">
+          <button class="cal-nav-btn" id="calPrev">←</button>
+          <span class="cal-month-title" id="calMonthTitle"></span>
+          <button class="cal-nav-btn" id="calNext">→</button>
+        </div>
+        <div class="cal-day-names">
+          <div class="cal-day-name">Sun</div>
+          <div class="cal-day-name">Mon</div>
+          <div class="cal-day-name">Tue</div>
+          <div class="cal-day-name">Wed</div>
+          <div class="cal-day-name">Thu</div>
+          <div class="cal-day-name">Fri</div>
+          <div class="cal-day-name">Sat</div>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+        <div class="cal-legend">
+          <div class="cal-legend-item">
+            <div class="cal-legend-dot" style="background: rgba(74,156,107,0.5); border: 1px solid rgba(74,156,107,0.6);"></div>
+            Available
+          </div>
+          <div class="cal-legend-item">
+            <div class="cal-legend-dot" style="background: rgba(231,76,60,0.3); border: 1px solid rgba(231,76,60,0.4);"></div>
+            Fully booked
+          </div>
+          <div class="cal-legend-item">
+            <div class="cal-legend-dot" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);"></div>
+            Not set
+          </div>
+        </div>
+      </div>
 
 
 
