@@ -497,7 +497,7 @@
   </footer>
 
   <script>
-    async function handleSubscribe() {hosting:3000) {
+    async function handleSubscribe() {
       const email = document.getElementById('subEmail').value.trim();
       const phone = document.getElementById('subPhone').value.trim();
 
@@ -507,7 +507,7 @@
       }
 
       try {
-        const res = await fetch('
+        const res = await fetch('http://localhost:3000/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, phone })
