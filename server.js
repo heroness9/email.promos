@@ -28,33 +28,22 @@ app.use(cors());
 app.use(express.json());
 
 // ═══════════════════════════════════════════════════════════════
-// CONFIG — fill these in before running
+// CONFIG — reads from Railway environment variables
+// Set these in Railway → Variables tab (never hardcode passwords!)
 // ═══════════════════════════════════════════════════════════════
 const CONFIG = {
-  // ── EMAIL (Gmail example) ──────────────────────────────────
-  // For Gmail: enable "App Passwords" in your Google account,
-  // then paste the 16-character app password below (not your real password).
   email: {
-    from:     'your@gmail.com',      // sender address
-    user:     'your@gmail.com',      // your Gmail address
-    password: 'xxxx xxxx xxxx xxxx', // Gmail App Password
+    from:     process.env.EMAIL_USER,
+    user:     process.env.EMAIL_USER,
+    password: process.env.EMAIL_PASSWORD,
   },
-
-  // ── SMS (Twilio) ───────────────────────────────────────────
-  // Sign up free at twilio.com, get your credentials from the Console.
   twilio: {
-    accountSid: 'ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    authToken:  'your_auth_token',
-    fromNumber: '+1234567890', // your Twilio phone number
+    accountSid: process.env.TWILIO_SID,
+    authToken:  process.env.TWILIO_TOKEN,
+    fromNumber: process.env.TWILIO_FROM,
   },
-
-  // ── SERVER ─────────────────────────────────────────────────
-  port: 3000,
-
-  // ── NOTIFY SECRET ──────────────────────────────────────────
-  // A simple password to protect the /notify endpoint so only
-  // you can trigger notifications.
-  notifySecret: 'change-this-to-something-secret',
+  port:         process.env.PORT || 3000,
+  notifySecret: process.env.NOTIFY_SECRET,
 };
 // ═══════════════════════════════════════════════════════════════
 
